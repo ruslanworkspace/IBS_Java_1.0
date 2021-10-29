@@ -20,6 +20,7 @@ public class Task_7 {
         arrLen = in.nextInt();
         System.out.printf("Введите %d элементов массива:\n", arrLen);
         arr = new int[arrLen];
+        // вариант 1
         for (int i = 0; i < arrLen; i++){
             arr[i] = in.nextInt();
             if (arr[i] == X || arr[i] == Y || arr[i] == Z){
@@ -27,5 +28,16 @@ public class Task_7 {
             }
         }
         if (flag_arrContainsConst) System.out.println("Данное значение имеется в константах");
+
+        // вариант 2
+/*        for (int i = 0; i < arrLen; i++){
+            arr[i] = in.nextInt();
+        }
+        for (int i = 0; i < arrLen; i++){
+            if (arr[i] == X || arr[i] == Y || arr[i] == Z){
+                System.out.printf("%d - данное значение имеется в константах\n",arr[i]);
+            }
+        }*/
+
     }
 }
