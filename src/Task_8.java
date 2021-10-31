@@ -13,7 +13,7 @@ public class Task_8 {
             System.out.print("Число неположительное! Выход ");
             System.exit(0);
         }
-        for (int i = 1; i < input; i+=2){
+        for (int i = 1; i <= input; i+=2){
             result += i;
         }
         System.out.printf("Сумма нечетных чисел от 1 до %d - %d", input, result);
