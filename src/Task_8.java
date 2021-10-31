@@ -9,8 +9,8 @@ public class Task_8 {
         Scanner in = new Scanner(System.in);
         System.out.print("Введите целое положительное число: ");
         input = in.nextInt();
-        if (input < 0) {
-            System.out.print("Число отрицательное! Выход ");
+        if (input <= 0) {
+            System.out.print("Число неположительное! Выход ");
             System.exit(0);
         }
         for (int i = 1; i < input; i+=2){
