@@ -14,19 +14,18 @@ public class FTask_1 {
 
         System.out.print("Курс доллара: ");
         double USD_rate = in.nextDouble();
-        checkInputValue(USD_rate);
-
-        System.out.print("Количество рублей: ");
-        double RUB_amount = in.nextDouble();
-        checkInputValue(RUB_amount);
-
-        System.out.printf("Итого: %.2f долларов", RUB_amount/USD_rate);
-    }
-
-    public static void checkInputValue(double input) {
-        if (input <= 0) {
+        if (USD_rate <= 0) {
             System.out.print("Неположительное значение. Выход.");
             System.exit(0);
         }
+
+        System.out.print("Количество рублей: ");
+        double RUB_amount = in.nextDouble();
+        if (RUB_amount < 0) {
+            System.out.print("Отрицательное значение. Выход.");
+            System.exit(0);
+        }
+
+        System.out.printf("Итого: %.2f долларов", RUB_amount/USD_rate);
     }
 }
